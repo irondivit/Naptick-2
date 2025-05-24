@@ -1,0 +1,6 @@
+__pycache__/
+.env
+*.wav
+.files/
+chroma_store/
+*.pdf
