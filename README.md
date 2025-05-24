@@ -22,18 +22,17 @@ Build a voice-to-voice intelligent agent that understands user queries related t
 
 ## 🧩 Datasets Used
 
-- `Sleep_health_and_lifestyle_dataset.csv`: Lifestyle, sleep hours, stress, disorders
-- `Sleep_Efficiency.csv`: Time in bed, total sleep, sleep efficiency
-- `mental_health_wearable_data.csv`: Heart rate, sleep, steps, mood, mental health risk
-
-These datasets are embedded as documents and queried during interaction.
+- `Sleep_health_and_lifestyle_dataset.csv`: lifestyle metrics, stress, sleep disorders
+- `Sleep_Efficiency.csv`: time in bed, efficiency % calculations
+- `Wearable_Dataset.csv`: synthetic but realistic sleep/steps data
+- `Sleep1.pdf`, `Sleep2.pdf`: clinical whitepapers from sleep research
 
 ---
 
 ## 🔧 Features Implemented
 
 ### 🎤 Voice Interaction
-- Records 5-second audio snippets using `sounddevice`
+- Records 8-second audio snippets using `sounddevice`
 - Uses Google Speech Recognition (STT) to transcribe audio
 - Replies vocally using `gTTS` and `simpleaudio` (cross-platform playback)
 
@@ -53,17 +52,20 @@ These datasets are embedded as documents and queried during interaction.
 ## 🗂 Project Structure
 
 ```
-naptik2/
+NAPTIK2/
 ├── data/
-│   ├── Sleep_health_and_lifestyle_dataset.csv
-│   ├── Sleep_Efficiency.csv
-│   └── mental_health_wearable_data.csv
+│ ├── Wearable_Dataset.csv
+│ ├── Sleep_health_and_lifestyle_dataset.csv
+│ ├── Sleep_Efficiency.csv
+│ ├── Sleep1.pdf
+│ └── Sleep2.pdf
 │
-├── rag_agent.py         # Builds the RAG pipeline
-├── cli_app.py           # CLI voice interface
-├── speech_utils.py      # STT + TTS support
-├── requirements.txt
-└── README.md
+├── agent.py # (Optional backup agent logic)
+├── cli_app.py # CLI entry point for voice chat
+├── loader.py # RAG logic: loads, embeds, builds agent
+├── speech_utils.py # Handles STT + TTS
+├── requirements.txt # All dependencies
+└── README.MD
 ```
 
 ---
@@ -112,8 +114,7 @@ Then follow the CLI prompts to speak to your sleep coach.
 
 - "Why do I wake up tired even after 8 hours of sleep?"
 - "How can I improve my REM sleep based on my wearable data?"
-- "What does my high heart rate and low sleep duration mean?"
-- "Give me a routine to reduce my stress and improve deep sleep."
+- "I slept for 6 hours yesterday night and feel very tired why is it?"
 
 ---
 
