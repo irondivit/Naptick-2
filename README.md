@@ -62,7 +62,6 @@ naptik2/
 ├── rag_agent.py         # Builds the RAG pipeline
 ├── cli_app.py           # CLI voice interface
 ├── speech_utils.py      # STT + TTS support
-├── .env                 # Contains Google Gemini API key
 ├── requirements.txt
 └── README.md
 ```
