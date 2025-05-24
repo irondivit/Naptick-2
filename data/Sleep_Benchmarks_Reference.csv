@@ -1,0 +1,8 @@
+Metric,Average,Min,Max,Normal Range,Interpretation
+Sleep Duration (hrs),7.2,4.5,9.0,7–9,Healthy adults should sleep 7–9 hrs
+Heart Rate (bpm),70.0,55.0,90.0,60–80,Resting HR above 85 bpm is high
+Wake Episodes,2.0,0.0,5.0,0–2,More than 2 wake-ups may disrupt sleep
+Steps,6500.0,1000.0,12000.0,5000–10000,Moderate activity improves sleep quality
+REM Sleep (min),90.0,40.0,120.0,80–120,REM below 80 min may affect recovery
+Deep Sleep (min),75.0,30.0,100.0,60–90,Deep sleep under 60 min may be insufficient
+Sleep Efficiency,0.6,0.4,0.85,0.5–0.85,Efficiency below 0.5 indicates restless sleep
